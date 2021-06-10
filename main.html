@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>20181544_소재근</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+</head>
+<body>
+  <a href="sub.html">[ 검색 기능 ]</a>을 누르시면 바로 이동합니다.
+    <div class="title">
+        <h1>CRUD 게시판</h1>
+        <p>[ 할 일을 추가해주세요! ]</p>
+    </div>
+    
+<div class="form">
+    <form action="javascript:void(0);" method="POST" onsubmit="app.Add()"> 
+    <input type="text" id="add-todo" placeholder="할 일을 입력해주세요.">
+    <input type="submit" value="Add" class="btn btn-outline-primary">
+    </form>
+    <p>총 추가된 갯수: </p>
+    <p id="counter"></p>
+
+    <table>
+    <tr class="to-do">
+        <th><h3>[ 할 것 목록 ]</h3></th>
+    </tr>
+        <tbody id="tasks">
+        </tbody>
+    </table>
+</div>
+
+<div id="edit-box" role="aria-hidden">
+    <form action="javascript:void(0);" method="POST" id="save-edit">
+      <input type="text" id="edit-todo">
+      <input type="submit" value="Save" class="btn btn-outline-success"/> <a onclick="CloseInput()" aria-label="Close">&#10006;</a>
+    </form>
+  </div>
+
+<script src="script.js"></script>
+</body>
+</html>
